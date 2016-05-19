@@ -1,0 +1,13 @@
+<ion-view view-title="Items">
+    <ion-content>
+        <!-- LIST -->
+        <span><button class="button button-positive" ng-click="vm.goToBackand()">Need Help?</button></span>
+        <span><button class="button button-positive" ng-click="vm.deleteAllObjects()">Delete all items</button></span>
+        <ion-list>
+          <ion-item ng-repeat="item in vm.item_types" ng-click="vm.addItem(item)">
+            Item: {{item}}<br> Clicked: {{vm.stats[item].sent}} Seen: {{vm.stats[item].seen}}
+          </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
